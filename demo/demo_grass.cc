@@ -385,7 +385,7 @@ struct DVPGrassManager final
                     size_t offset = i * GrassObject::kDVPBufferSize;
                     const GrassObject& obj = grassObjects[i];
 
-                    glm::mat4 matrix = glm::translate(obj.position);
+                    glm::mat4 matrix = glm::translate(glm::mat4(1.f), obj.position);
                     matrix = glm::transpose(matrix);
 
                     //glm::vec4 boundingBoxMin = obj.boundingBox.min * matrix;
